@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Between the Lines | Community Book Reviews</title>
+    
+    <!-- This links our CSS file so the site looks good -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- We're using a nice font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER: The top part of your site with the name and menu -->
+    <header>
+        <nav class="container">
+            <div class="logo">Between <span>the Lines</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Recent Reviews</a></li>
+                <li><a href="#submit">Write a Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO: The big welcoming section at the top -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Discover your next favorite story.</h1>
+            <p>A place where book lovers share honest thoughts on every chapter.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by book title or author...">
+                <button class="btn-main">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS: Where the book reviews are displayed -->
+    <section id="reviews" class="reviews-section container">
+        <h2 class="section-title">Latest Community Reviews</h2>
+        
+        <div class="reviews-grid">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+                <div class="book-cover" style="background-color: #e67e22;">The Great Gatsby</div>
+                <div class="review-info">
+                    <h3>The Great Gatsby</h3>
+                    <p class="author">by F. Scott Fitzgerald</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="review-text">"A hauntingly beautiful classic. The writing is poetic and the themes of the American Dream are still relevant today."</p>
+                    <p class="reviewer">- Reviewed by Sarah J.</p>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card">
+                <div class="book-cover" style="background-color: #3498db;">Project Hail Mary</div>
+                <div class="review-info">
+                    <h3>Project Hail Mary</h3>
+                    <p class="author">by Andy Weir</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="review-text">"If you loved The Martian, you'll love this. Science, humor, and a great friendship. I couldn't put it down!"</p>
+                    <p class="reviewer">- Reviewed by Mike D.</p>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card">
+                <div class="book-cover" style="background-color: #2ecc71;">Circe</div>
+                <div class="review-info">
+                    <h3>Circe</h3>
+                    <p class="author">by Madeline Miller</p>
+                    <div class="rating">★★★★☆</div>
+                    <p class="review-text">"A wonderful reimagining of Greek mythology. Miller makes Circe such a relatable and powerful character."</p>
+                    <p class="reviewer">- Reviewed by Elena R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBMIT: The form where people can add their own reviews -->
+    <section id="submit" class="submit-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Share Your Thoughts</h2>
+                <p>Finished a book recently? Let the community know what you thought!</p>
+                
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" id="bookTitle" required placeholder="e.g. The Hobbit">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" id="bookAuthor" required placeholder="e.g. J.R.R. Tolkien">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookRating">Rating</label>
+                        <select id="bookRating">
+                            <option value="5">5 Stars - Amazing</option>
+                            <option value="4">4 Stars - Great</option>
+                            <option value="3">3 Stars - Good</option>
+                            <option value="2">2 Stars - Okay</option>
+                            <option value="1">1 Star - Poor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookReview">Your Review</label>
+                        <textarea id="bookReview" rows="5" required placeholder="What did you love or hate about it?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Post Review</button>
+                </form>
+                
+                <!-- This message shows up after someone submits the form -->
+                <div id="successMessage" class="hidden">
+                    <h3>Thank you!</h3>
+                    <p>Your review for <span id="submittedBook"></span> has been posted.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: The bottom of the page -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Between the Lines. Keep reading!</p>
+        </div>
+    </footer>
+
+    <!-- This links our JavaScript file so the site can do things -->
+    <script src="script.js"></script>
+</body>
+</html>
