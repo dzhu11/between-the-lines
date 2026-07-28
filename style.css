@@ -1,0 +1,280 @@
+/* ============================================================
+   PINK & WHITE AESTHETIC THEME
+============================================================ */
+
+:root {
+    --primary-pink: #ffb7c5;      /* Cherry Blossom Pink */
+    --soft-pink: #fff0f3;         /* Very light pink for backgrounds */
+    --accent-pink: #ff8fa3;       /* Deeper pink for buttons/links */
+    --white: #ffffff;
+    --text-dark: #4a4a4a;
+    --text-light: #8e8e8e;
+    --shadow: 0 4px 20px rgba(255, 183, 197, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--soft-pink);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-pink);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-pink);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--accent-pink);
+}
+
+/* ============================================================
+   HERO & PAGE TITLES
+============================================================ */
+
+.hero {
+    padding: 80px 0;
+    background-color: var(--soft-pink);
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: var(--accent-pink);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-pink {
+    background-color: var(--primary-pink);
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: var(--accent-pink);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   SECTIONS
+============================================================ */
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--accent-pink);
+}
+
+/* ============================================================
+   TEAM CARDS
+============================================================ */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--soft-pink);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-pink);
+}
+
+.role-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.target-badge {
+    display: inline-block;
+    background: var(--soft-pink);
+    color: var(--accent-pink);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* ============================================================
+   REVIEWS (Empty State)
+============================================================ */
+
+.empty-reviews {
+    text-align: center;
+    padding: 40px;
+    background: var(--soft-pink);
+    border-radius: 20px;
+    border: 2px dashed var(--primary-pink);
+}
+
+.empty-reviews p {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ============================================================
+   FORMS
+============================================================ */
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--soft-pink);
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--accent-pink);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-pink);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+    background-color: var(--soft-pink);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--accent-pink);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+}
